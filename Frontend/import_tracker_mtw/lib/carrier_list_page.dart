@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Record_list_page extends StatelessWidget {
-  const Record_list_page({Key? key}) : super(key: key);
+class Carrier_list_page extends StatelessWidget {
+  const Carrier_list_page({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -39,14 +39,16 @@ class Record_list_page extends StatelessWidget {
             child: Container(
               color: Color(0xFFD9D9D9),
               child: Center(
-                child: Image.asset(
-                'assets/pantalla_principal.png',
-                width: 1400,
-                height: 3000,
-                ),
+                child: Text(
+                  'Listado de expedientes',
+                  style: TextStyle(
+                    fontSize: 24,
+                    color: Colors.black,
+                  ),
                 ),
               ),
             ),
+          ),
         ],
       ),
     );

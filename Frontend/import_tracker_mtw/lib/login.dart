@@ -1,17 +1,26 @@
 import 'package:flutter/material.dart';
 import 'record_list_page.dart';
+import 'main.dart';
+import 'bottom_nav_bar.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
+  const LoginPage({super.key});
+
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFEAEAEA),
+      backgroundColor: const Color(0xFFEAEAEA),
       body: Center(
         child: Container(
-          margin: EdgeInsets.all(20.0),
-          padding: EdgeInsets.all(20.0),
+          margin: const EdgeInsets.all(20.0),
+          padding: const EdgeInsets.all(20.0),
           decoration: BoxDecoration(
-            color: Color(0xFFD9D9D9),
+            color: const Color(0xFFD9D9D9),
             borderRadius: BorderRadius.circular(15.0),
           ),
           child: SingleChildScrollView(
@@ -22,8 +31,8 @@ class LoginPage extends StatelessWidget {
                   'assets/logo2.png',
                   height: 150.0,
                 ),
-                SizedBox(height: 30.0),
-                TextField(
+                const SizedBox(height: 30.0),
+                const TextField(
                   style: TextStyle(color: Colors.black),
                   decoration: InputDecoration(
                     labelText: 'Usuario',
@@ -32,8 +41,8 @@ class LoginPage extends StatelessWidget {
                     fillColor: Colors.white,
                   ),
                 ),
-                SizedBox(height: 20.0),
-                TextField(
+                const SizedBox(height: 20.0),
+                const TextField(
                   style: TextStyle(color: Colors.black),
                   obscureText: true,
                   decoration: InputDecoration(
@@ -43,7 +52,7 @@ class LoginPage extends StatelessWidget {
                     fillColor: Colors.white,
                   ),
                 ),
-                SizedBox(height: 20.0),
+                const SizedBox(height: 20.0),
                 SizedBox(
                   width: 400,
                   height: 50,
@@ -51,13 +60,13 @@ class LoginPage extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Record_list_page()),
+                        MaterialPageRoute(builder: (context) => HomePage()),
                       );
                     },
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Color(0xFF3b75CC),
+                      backgroundColor: const Color(0xFF3b75CC),
                     ),
-                    child: Text(
+                    child: const Text(
                       'Iniciar Sesión',
                       style: TextStyle(
                         color: Colors.white,
@@ -74,3 +83,4 @@ class LoginPage extends StatelessWidget {
     );
   }
 }
+
