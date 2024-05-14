@@ -18,8 +18,28 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  fonts:
+    - family: AnonymousPro
+      fonts:
+        - asset: fonts/AnonymousPro-Regular.ttf
+          weight: 400
+        - asset: fonts/AnonymousPro-Bold.ttf
+          weight: 700
+        - asset: fonts/AnonymousPro-Italic.ttf
+          weight: 400
+          style: italic
+        - asset: fonts/AnonymousPro-BoldItalic.ttf
+          weight: 700
+          style: italic
+
   assets:
     - assets/logo.jpeg
     - assets/logo2.png
     - assets/pp.jpg
     - assets/pantalla_principal.png
+    - assets/perfil.png
+    - assets/perfil2.png
+    - assets/proveedor.png
+    - assets/fletero.png
+    - assets/cliente.png

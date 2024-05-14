@@ -1,19 +1,20 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'register.dart';
+import 'package:import_tracker_mtw/login.dart';
 import 'record_list_page.dart';
 import 'main.dart';
 import 'bottom_nav_bar.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+class RegisterPage extends StatefulWidget {
+  const RegisterPage({super.key});
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<RegisterPage> createState() => _RegisterPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
-  bool _obscureText = true;
+class _RegisterPageState extends State<RegisterPage> {
+  bool _obscureText1 = true;
+  bool _obscureText2 = true;
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +25,7 @@ class _LoginPageState extends State<LoginPage> {
         body: Stack(
           children: [
             Positioned(
-              top: 20,
+              top: 0,
               left: 0,
               right: 0,
               child: Center(
@@ -40,7 +41,7 @@ class _LoginPageState extends State<LoginPage> {
               left: 0,
               right: 0,
               child: Container(
-                height: MediaQuery.of(context).size.height * 0.65,
+                height: MediaQuery.of(context).size.height * 0.7,
                 decoration: BoxDecoration(
                   color: Color(0xFF212640),
                   borderRadius: BorderRadius.only(
@@ -54,7 +55,7 @@ class _LoginPageState extends State<LoginPage> {
                     Padding(
                       padding: EdgeInsets.only(top: 20.0),
                       child: Text(
-                        'Bienvenido',
+                        'Registro',
                         style: TextStyle(
                           fontFamily: 'AnonymousPro',
                           color: Colors.white,
@@ -62,7 +63,7 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                       ),
                     ),
-                    SizedBox(height: 30.0),
+                    SizedBox(height: 15.0),
                     Padding(
                       padding: EdgeInsets.symmetric(horizontal: 30.0),
                       child: Column(
@@ -101,7 +102,7 @@ class _LoginPageState extends State<LoginPage> {
                         ],
                       ),
                     ),
-                    SizedBox(height: 25.0),
+                    SizedBox(height: 15.0),
                     Padding(
                       padding: EdgeInsets.symmetric(horizontal: 30.0),
                       child: Column(
@@ -133,7 +134,7 @@ class _LoginPageState extends State<LoginPage> {
                                   ],
                                 ),
                                 child: TextField(
-                                  obscureText: _obscureText,
+                                  obscureText: _obscureText1,
                                   decoration: InputDecoration(
                                     border: InputBorder.none,
                                     contentPadding: EdgeInsets.symmetric(horizontal: 15.0),
@@ -144,11 +145,11 @@ class _LoginPageState extends State<LoginPage> {
                               IconButton(
                                 onPressed: () {
                                   setState(() {
-                                    _obscureText = !_obscureText;
+                                    _obscureText1 = !_obscureText1;
                                   });
                                 },
                                 icon: Icon(
-                                  _obscureText ? Icons.visibility : Icons.visibility_off,
+                                  _obscureText1 ? Icons.visibility : Icons.visibility_off,
                                   color: Color.fromRGBO(0, 0, 0, 0.52),
                                 ),
                               ),
@@ -157,6 +158,63 @@ class _LoginPageState extends State<LoginPage> {
                         ],
                       ),
                     ),
+                    SizedBox(height: 15.0),
+                    Padding(
+                      padding: EdgeInsets.symmetric(horizontal: 30.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Repetir Contraseña',
+                            style: TextStyle(
+                              fontFamily: 'AnonymousPro',
+                              color: Colors.white,
+                              fontSize: 24.0,
+                            ),
+                          ),
+                          SizedBox(height: 10.0),
+                          Stack(
+                            alignment: Alignment.centerRight,
+                            children: [
+                              Container(
+                                height: 50.0,
+                                decoration: BoxDecoration(
+                                  color: Color(0xFF4B4D5C),
+                                  borderRadius: BorderRadius.circular(23.0),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Color.fromRGBO(0, 0, 0, 0.5),
+                                      blurRadius: 4,
+                                      offset: Offset(0, 4),
+                                    ),
+                                  ],
+                                ),
+                                child: TextField(
+                                  obscureText: _obscureText2,
+                                  decoration: InputDecoration(
+                                    border: InputBorder.none,
+                                    contentPadding: EdgeInsets.symmetric(horizontal: 15.0),
+                                  ),
+                                  style: TextStyle(color: Colors.white),
+                                ),
+                              ),
+                              IconButton(
+                                onPressed: () {
+                                  setState(() {
+                                    _obscureText2 = !_obscureText2;
+                                  });
+                                },
+                                icon: Icon(
+                                  _obscureText2 ? Icons.visibility : Icons.visibility_off,
+                                  color: Color.fromRGBO(0, 0, 0, 0.52),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(height: 30.0),
                     Container(
                       height: 60.0,
                       width: MediaQuery.of(context).size.width * 0.80,
@@ -168,11 +226,11 @@ class _LoginPageState extends State<LoginPage> {
                         onPressed: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => HomePage()),
+                            MaterialPageRoute(builder: (context) => LoginPage()),
                           );
                         },
                         child: Text(
-                          'Iniciar sesión',
+                          'Registrarse',
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 24.0,
@@ -192,14 +250,14 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                           children: [
                             TextSpan(
-                              text: '¿No tienes una cuenta? ',
+                              text: '¿Tienes una cuenta? ',
                             ),
                             WidgetSpan(
                               child: GestureDetector(
                                 onTap: () {
                                   Navigator.push(
                                     context,
-                                    MaterialPageRoute(builder: (context) => RegisterPage()),
+                                    MaterialPageRoute(builder: (context) => LoginPage()),
                                   );
                                 },
                                 child: Text(

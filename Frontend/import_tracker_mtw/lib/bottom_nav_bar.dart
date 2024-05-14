@@ -13,38 +13,30 @@ class _BNavigatorState extends State<BNavigator> {
   @override
   Widget build(BuildContext context){
     return BottomNavigationBar(
-      currentIndex: index,
-      onTap: (int i){
-        setState(() {
-          index = i;
-          widget.currentIndex(i);
-        });
-      },
-      type: BottomNavigationBarType.fixed,
-      iconSize: 30.0,
-      backgroundColor: const Color(0xFF565555),
-      selectedItemColor: Colors.white,
-      unselectedItemColor: Colors.grey,
-      selectedFontSize: 15.0,
-      unselectedFontSize: 12.0,
-      items: const [
-        BottomNavigationBarItem(
-            icon: Icon(Icons.file_open),
-            label: 'Expedientes',
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.person_sharp),
-          label: 'Proveedores',
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.person),
-          label: 'Clientes',
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(Icons.local_shipping),
-          label: 'Fleteros',
-        ),
-      ]
+        currentIndex: index,
+        onTap: (int i){
+          setState(() {
+            index = i;
+            widget.currentIndex(i);
+          });
+        },
+        type: BottomNavigationBarType.fixed,
+        iconSize: 60.0,
+        backgroundColor: Color(0xFFD9D9D9),
+        selectedItemColor: Color(0xFF504BAE),
+        unselectedItemColor: Colors.grey,
+        selectedFontSize: 1.0,
+        unselectedFontSize: 1.0,
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.supervised_user_circle),
+            label: '',
+          ),
+        ]
     );
   }
 }
