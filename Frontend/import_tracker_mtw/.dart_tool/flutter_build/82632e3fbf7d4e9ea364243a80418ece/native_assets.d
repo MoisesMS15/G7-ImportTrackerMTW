@@ -1,0 +1,1 @@
+ C:\\Users\\Equipo\\StudioProjects\\import_tracker_mtw\\.dart_tool\\flutter_build\\82632e3fbf7d4e9ea364243a80418ece\\native_assets.yaml: 
