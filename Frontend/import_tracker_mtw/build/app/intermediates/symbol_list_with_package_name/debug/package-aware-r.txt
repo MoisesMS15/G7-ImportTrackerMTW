@@ -1,4 +1,4 @@
-com.example.import_tracker_mtw
+com.example.import_tracker_mtw_v2
 attr activityAction
 attr activityName
 attr alpha

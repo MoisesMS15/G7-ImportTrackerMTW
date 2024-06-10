@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/import_tracker_mtw.iml" filepath="$PROJECT_DIR$/import_tracker_mtw.iml" />
-      <module fileurl="file://$PROJECT_DIR$/android/import_tracker_mtw_android.iml" filepath="$PROJECT_DIR$/android/import_tracker_mtw_android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/import_tracker_mtw_v2.iml" filepath="$PROJECT_DIR$/import_tracker_mtw_v2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android/import_tracker_mtw_v2_android.iml" filepath="$PROJECT_DIR$/android/import_tracker_mtw_v2_android.iml" />
     </modules>
   </component>
 </project>

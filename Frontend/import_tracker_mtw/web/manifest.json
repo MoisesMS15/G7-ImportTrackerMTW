@@ -1,6 +1,6 @@
 {
-    "name": "import_tracker_mtw",
-    "short_name": "import_tracker_mtw",
+    "name": "import_tracker_mtw_v2",
+    "short_name": "import_tracker_mtw_v2",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

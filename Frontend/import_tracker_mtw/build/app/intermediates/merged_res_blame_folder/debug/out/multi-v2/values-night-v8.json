@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.import_tracker_mtw.app-mergeDebugResources-9:/values-night-v8/values-night-v8.xml",
+            "outputFile": "com.example.import_tracker_mtw_v2.app-mergeDebugResources-9:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Equipo\\StudioProjects\\import_tracker_mtw\\android\\app\\src\\main\\res\\values-night\\styles.xml",
+                    "source": "D:\\G7-ImportTrackerMTW\\Frontend\\import_tracker_mtw\\android\\app\\src\\main\\res\\values-night\\styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",
